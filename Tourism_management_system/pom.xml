@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+  <!-- Maven Project Object Model Version -->
+  <modelVersion>4.0.0</modelVersion>
+  
+  <!-- ================== Project Identification ================== -->
+  <groupId>com</groupId>  <!-- Group ID usually represents the company or organization -->
+  <artifactId>Tourism_management_system</artifactId>  <!-- Artifact ID is the name of the project -->
+  <version>0.0.1-SNAPSHOT</version> <!-- Project version -->
+  <packaging>jar</packaging>  <!-- Packaging type (jar/war/ear) -->
+
+  <!-- ================== Project Details ================== -->
+  <name>Tourism_management_system</name>  <!-- Name of the Project -->
+  <url>http://maven.apache.org</url>  <!-- Project URL (placeholder) -->
+
+  <!-- ================== Project Properties ================== -->
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  <!-- Encoding format for the project source files -->
+  </properties>
+
+  <!-- ================== Project Dependencies ================== -->
+  <dependencies>
+	
+	<!-- JUnit Dependency for Testing -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <!-- Hibernate Core Dependency for ORM -->
+    <dependency>
+       <groupId>org.hibernate</groupId>
+       <artifactId>hibernate-core</artifactId>
+       <version>6.1.7.Final</version>
+    </dependency>
+        
+    <!-- MySQL Connector Dependency for Database Connection -->
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>8.0.32</version>
+    </dependency>
+    
+  </dependencies>
+</project>
