@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration 
+	DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd" -->
+<!--
+    Hibernate Configuration File
+    This file configures the database connection, Hibernate properties, and entity mappings.
+-->
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database connection settings -->
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>  <!-- MySQL JDBC Driver -->
+		<property name="connection.url">jdbc:mysql://localhost:3306/tourism_management</property>  <!-- Database URL -->
+		<property name="connection.username">root</property>      <!-- Database Username -->
+		<property name="connection.password">security</property>  <!-- Database Password -->
+		
+		<!-- Automatically create or update database schema -->
+		<!-- ================== Database Connection Settings ================== -->
+		<property name="hbm2ddl.auto">update</property>  <!-- Auto update the database schema based on entity classes -->
+		<!-- Specify the dialect for your database -->
+		<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>  <!-- Hibernate SQL Dialect for MySQL 8 -->
+		
+		<!-- Enable or disable showing SQL statements in the console -->
+		<!-- ================== Logging and Formatting ================== -->
+		<property name="show_sql">false</property>     <!-- Set true to show SQL statements in the console -->
+		<property name="format_sql">true</property>    <!-- Format the SQL queries for better readability -->
+		
+		<!-- ================== Entity Mappings ================== -->
+		<mapping class="com.Tourism.entity.Route"/>    <!-- Mapping for Route entity -->
+		<mapping class="com.Tourism.entity.Booking"/>  <!-- Mapping for Booking entity -->
+		<mapping class="com.Tourism.entity.User"/>     <!-- Mapping for User entity -->
+		<mapping class="com.Tourism.entity.Report"/>   <!-- Mapping for Report entity -->
+        <mapping class="com.Tourism.entity.Bus"/>      <!-- Mapping for Bus entity -->
+        <mapping class="com.Tourism.entity.Ticket"/>   <!-- Mapping for Ticket entity -->
+        <mapping class="com.Tourism.entity.Feedback"/> <!-- Mapping for Feedback entity -->
+		</session-factory>
+</hibernate-configuration>
